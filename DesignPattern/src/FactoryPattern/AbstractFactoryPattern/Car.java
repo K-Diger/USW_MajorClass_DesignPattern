@@ -5,7 +5,6 @@ public class Car {
     private Motor motor;
     private Appearance appearance;
 
-
     public Motor getMotor() {
         return motor;
     }

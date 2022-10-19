@@ -1,31 +1,27 @@
 package FactoryPattern.AbstractFactoryPattern;
 
-import FactoryPattern.AbstractFactoryPattern.Hyundai.HyundaiCarFactory;
 import FactoryPattern.AbstractFactoryPattern.Hyundai.HyundaiCarFactoryImpl;
-import FactoryPattern.AbstractFactoryPattern.Kia.KiaCarFactory;
 import FactoryPattern.AbstractFactoryPattern.Kia.KiaCarFactoryImpl;
 
 public class CarFactoryOfFactory {
-    private final HyundaiCarFactory hyundaiCarFactory = new HyundaiCarFactoryImpl();
-    private final KiaCarFactory kiaCarFactory = new KiaCarFactoryImpl();
-
     public Appearance createCarAppearance(String company) {
         if (company.equals("Hyundai")) {
-            return hyundaiCarFactory.createAppearance();
+            CarFactory carFactory = new HyundaiCarFactoryImpl();
+            return carFactory.createAppearance();
         } else if (company.equals("Kia")) {
-            return kiaCarFactory.createAppearance();
+            CarFactory carFactory = new KiaCarFactoryImpl();
+            return carFactory.createAppearance();
         }
-
         return null;
     }
-
     public Motor createCarMotor(String company) {
         if (company.equals("Hyundai")) {
-            return hyundaiCarFactory.createMotor();
+            CarFactory carFactory = new HyundaiCarFactoryImpl();
+            return carFactory.createMotor();
         } else if (company.equals("Kia")) {
-            return kiaCarFactory.createMotor();
+            CarFactory carFactory = new KiaCarFactoryImpl();
+            return carFactory.createMotor();
         }
-
         return null;
     }
 }

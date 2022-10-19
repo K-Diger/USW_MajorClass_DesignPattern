@@ -8,7 +8,8 @@ public class HyundaiCarFactoryImpl implements HyundaiCarFactory {
     @Override
     public Motor createMotor() {
         System.out.println("현대차 모터 생성");
-        return new Motor("Hyundai", 10000000);    }
+        return new Motor("Hyundai", 10000000);
+    }
 
     @Override
     public Appearance createAppearance() {
