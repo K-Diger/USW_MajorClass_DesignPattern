@@ -3,9 +3,9 @@ package FactoryPattern.FactoryMethodPattern;
 public interface CarFactory {
 
     default Car orderCar() {
-        Car phone = createCar();
-        phone.complete();
-        return phone;
+        Car car = createCar();
+        car.complete();
+        return car;
     }
 
     Car createCar();

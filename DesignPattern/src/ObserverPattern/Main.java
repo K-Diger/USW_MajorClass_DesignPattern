@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         AldarisImpl observerImpl = new AldarisImpl();
 
-        Zealot zealot1 = new RealZealot();
-        Zealot zealot2 = new RealZealot();
-        Zealot zealot3 = new RealZealot();
+        Zealot zealot1 = new ZealotImpl();
+        Zealot zealot2 = new ZealotImpl();
+        Zealot zealot3 = new ZealotImpl();
 
         observerImpl.subscribe(zealot1);
         observerImpl.subscribe(zealot2);
