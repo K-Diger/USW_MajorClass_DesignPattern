@@ -1,0 +1,2 @@
+# USW_MajorClass_DesignPattern
+USW_MajorClass_DesignPattern
